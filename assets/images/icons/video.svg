@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62" width="62" height="62">
+	<title>video-svg</title>
+	<style>
+		.s0 { fill: #ffffff } 
+		.s1 { fill: #00e5cc } 
+	</style>
+	<g id="video">
+		<path id="Layer" class="s0" d="m1 31c0-16.6 13.4-30 30-30 16.6 0 30 13.4 30 30 0 16.6-13.4 30-30 30-16.6 0-30-13.4-30-30z"/>
+		<path id="Polygon 1" class="s1" d="m39.5 30.1c0.7 0.4 0.7 1.4 0 1.8l-12 6.9c-0.7 0.4-1.5-0.1-1.5-0.9v-13.8c0-0.8 0.8-1.3 1.5-0.9z"/>
+	</g>
+</svg>

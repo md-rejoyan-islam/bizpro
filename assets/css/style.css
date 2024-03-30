@@ -147,6 +147,115 @@ header .trial-btn {
 
 /* end header  */
 
+/* start bussiness  section  */
+
+#business {
+  background-color: var(--bg-color);
+}
+
+#bussiness_btns {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+#business .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20;
+  padding: 70px 5px;
+  /* align-items: center; */
+}
+#business .bussiness-img {
+  grid-column: span 2;
+}
+
+#business p {
+  padding: 20px 0;
+}
+
+#started_btn {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 15px 20px;
+}
+
+#business #video_btn img {
+  width: 45px;
+}
+
+#business #video_btn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+
+  align-items: center;
+}
+
+/* end bussiness  section  */
+/* start work  section  */
+
+#work {
+  padding: 100px 5px;
+}
+#work h2 {
+  padding: 50px 0;
+  text-align: center;
+  color: var(--secondary-color);
+}
+#work .container > p {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 175% */
+}
+
+.work-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 50px 0;
+}
+.work-cards .work-card {
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0px 30px 50px 0px #0303250f;
+  padding: 20px;
+  border: 1px solid #f6f1f1;
+}
+.work-cards .card-body {
+  padding: 10px 0;
+  text-align: left;
+}
+.work-card img {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #ecf9ffcc;
+}
+.work-card h4 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px; /* 141.667% */
+  color: var(--secondary-color);
+}
+.work-card .card-body p {
+  color: var(--para-color);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 15px 0;
+}
+
+/* end work  section  */
+
 /* start about us  */
 
 #about {
