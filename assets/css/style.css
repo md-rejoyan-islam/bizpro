@@ -9,7 +9,7 @@
   --para-color: #9090a7;
   --secondary-color: #060640;
   --bg-color: #ecf9ff;
-  --max-container: 1340px;
+  --max-container: 1296px;
   --size-small: 640px;
   --size-medium: 768px;
   --size-large: 1024px;
@@ -18,28 +18,28 @@
 /* airbnb font family  */
 @font-face {
   font-family: "Airbnb";
-  src: url("/assets/font/AirbnbCereal_W_Lt.otf");
+  src: url("./assets/font/AirbnbCereal_W_Lt.otf");
   font-weight: 300;
 }
 @font-face {
   font-family: "Airbnb";
-  src: url("/assets/font/AirbnbCereal_W_Bd.otf");
+  src: url("./assets/font/AirbnbCereal_W_Bd.otf");
   font-weight: 700;
 }
 @font-face {
   font-family: "Airbnb";
-  src: url("/assets/font/AirbnbCereal_W_Blk.otf");
+  src: url("./assets/font/AirbnbCereal_W_Blk.otf");
   font-weight: 600;
 }
 @font-face {
   font-family: "Airbnb";
-  src: url("/assets/font/AirbnbCereal_W_Md.otf");
-  font-weight: 400;
+  src: url("./assets/font/AirbnbCereal_W_Md.otf");
+  font-weight: 500;
 }
 
 body {
   font-family: "Airbnb", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 a {
@@ -75,7 +75,7 @@ h2 {
 
 /* container  */
 .container {
-  max-width: 1340px;
+  max-width: 1296px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -84,19 +84,31 @@ h2 {
 
 header {
   background-color: var(--bg-color);
-  padding: 20px 0;
+  padding: 20px 10px;
 }
-header nav {
-  max-width: 1170px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 7px;
+
+header .small-screen {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 80px;
-  gap: 20px;
-  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.small-screen .bar {
+  border: none;
+  background-color: #eee;
+  padding: 7px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.small-screen .bar:hover {
+  background-color: rgb(204, 225, 225);
+}
+.small-screen .bar i {
+  font-size: 17px;
+}
+
+.nav-screen {
+  display: none;
 }
 
 header nav .logo {
@@ -107,11 +119,76 @@ header nav .logo {
   line-height: 30px; /* 100% */
 }
 
-header nav ul {
+header nav {
+  position: absolute;
+  width: 95%;
+  top: 15px;
+  padding: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.nav-logo {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 10px;
+}
+.cross-btn {
+  background-color: #f3ebeb;
+  height: 25px;
+  width: 25px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.cross-btn:hover {
+  background-color: #f5d3d3;
+}
+
+header nav ul li {
+  padding: 7px 0;
+}
+
+.nav-btns {
+  display: flex;
   align-items: center;
   gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .small-screen.container {
+    display: none;
+  }
+  .nav-screen {
+    display: flex;
+  }
+  header nav {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .nav-logo {
+    padding-bottom: 0px;
+  }
+  .cross-btn {
+    display: none;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
 }
 
 header nav .nav-links a:hover {
@@ -122,7 +199,7 @@ header nav ul li a {
   color: var(--para-color);
   font-size: 14px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 14px; /* 100% */
 }
 
@@ -151,6 +228,7 @@ header .trial-btn {
 
 #business {
   background-color: var(--bg-color);
+  padding: 50px 10px 30px;
 }
 
 #bussiness_btns {
@@ -158,15 +236,41 @@ header .trial-btn {
   align-items: center;
   gap: 20px;
   padding: 20px 0;
+  justify-content: center;
 }
 
 #business .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  /* align-items: center; */
-  padding: 70px 5px;
-  /* align-items: center; */
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 30px;
+}
+
+#business h2 {
+  max-width: 450px;
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+  #business {
+    padding: 70px 10px 50px;
+  }
+}
+
+@media screen and (min-width: 1296px) {
+  #business .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    padding: 70px 10px;
+  }
+  #bussiness_btns {
+    justify-content: start;
+  }
+  #business h2 {
+    text-align: left;
+    margin: 0;
+  }
 }
 
 #business .container .left {
@@ -184,6 +288,8 @@ header .trial-btn {
 
 #business p {
   padding: 20px 0;
+  max-width: 450px;
+  margin: auto;
 }
 
 #started_btn {
@@ -203,7 +309,7 @@ header .trial-btn {
   background-color: transparent;
   border: none;
   display: flex;
-
+  cursor: pointer;
   align-items: center;
 }
 
@@ -211,6 +317,8 @@ header .trial-btn {
   padding: 20px;
   background-color: #fff;
   border-radius: 7px;
+  max-width: 450px;
+  margin: auto;
 }
 
 #bussiness_rating .rating_icons {
