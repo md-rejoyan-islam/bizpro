@@ -67,7 +67,7 @@ h3 {
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 700;
   line-height: 55px; /* 122.222% */
@@ -163,12 +163,23 @@ header .trial-btn {
 #business .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20;
+  gap: 60px;
+  /* align-items: center; */
   padding: 70px 5px;
   /* align-items: center; */
 }
+
+#business .container .left {
+  padding: 40px 0;
+}
+
 #business .bussiness-img {
   grid-column: span 2;
+  width: 100%;
+}
+
+#business .bussiness-img img {
+  width: 100%;
 }
 
 #business p {
@@ -193,6 +204,18 @@ header .trial-btn {
   border: none;
   display: flex;
 
+  align-items: center;
+}
+
+#bussiness_rating {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 7px;
+}
+
+#bussiness_rating .rating_icons {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
