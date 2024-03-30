@@ -341,8 +341,8 @@ header .trial-btn {
 }
 
 /* end bussiness  section  */
-/* start work  section  */
 
+/* start work  section  */
 #work {
   padding: 60px 10px;
 }
@@ -845,7 +845,7 @@ header .trial-btn {
 
 /* end packages  */
 
-/* footer  */
+/* start  footer  */
 
 footer .footer-widget {
   background-color: var(--secondary-color);
@@ -951,12 +951,6 @@ footer .copyright {
     padding: 27px 10px;
   }
 
-  /* .social-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  } */
-
   .social-links .links {
     grid-column: span 1;
     display: flex;
@@ -1000,3 +994,5 @@ footer .copyright {
     text-align: left;
   }
 }
+
+/* end  footer  */
