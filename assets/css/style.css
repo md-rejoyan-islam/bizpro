@@ -253,6 +253,12 @@ header .trial-btn {
   padding: 20px;
   border: 1px solid #f6f1f1;
 }
+
+.work-cards .work-card:hover {
+  box-shadow: 0px 30px 50px 0px #03032516;
+  border: 1px solid #b5efcb;
+}
+
 .work-cards .card-body {
   padding: 10px 0;
   text-align: left;
