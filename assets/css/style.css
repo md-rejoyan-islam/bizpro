@@ -373,17 +373,17 @@ header .trial-btn {
   background-color: #ecfdff;
   border-radius: 7px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
   box-sizing: border-box;
-  padding: 60px 60px 0;
+  padding: 60px 60px 0px;
   /* align-items: end; */
   /* grid-template-columns: repeat(3, 1fr); */
 }
 .subscribe {
-  /* padding: 0px 60px; */
-  height: max-content;
-
-  /* grid-column: span 2; */
+  grid-column: span 2;
+  padding-bottom: 30px;
 }
 
 .subscribe p {
@@ -426,14 +426,18 @@ header .trial-btn {
 
 #promotion-man {
   /* height: f; */
-  margin: 0;
-  padding: 0;
+  grid-column: span 1;
+  text-align: right;
   box-sizing: border-box;
+  position: relative;
 }
 
 #promotion-man img {
-  width: 375px;
-  scale: 1.6;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 270px;
+  scale: 1.1;
   transform-origin: bottom;
 }
 
