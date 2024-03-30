@@ -1,29 +1,19 @@
-# Project Name
+# Bizpro - A Business-Promotion-Solution-Landing-Page
 
 ## Description
 
-[Provide a brief description of your project]
+This project is build using HTML:5, CSS:3, JavaScript. This ia a business promotion solution landing page. This project is clone from a figma file to HTML.
 
-## Features
+## Technologies
 
-- [List the main features of your project]
+- ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+- ![JAVASCRIPT](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-## Installation
+### Live Preview
 
-[Provide instructions on how to install and set up your project]
+[PREVIEW](https://md-rejoyan-islam.github.io/bizpro)
 
-## Usage
+### Figma File
 
-[Explain how to use your project, including any necessary commands or configurations]
-
-## Contributing
-
-[Specify how others can contribute to your project, if applicable]
-
-## License
-
-[Choose an appropriate license for your project and include it here]
-
-## Contact
-
-[Provide your contact information or any relevant links]
+[LINK](<https://www.figma.com/file/27PECBAoJw6P4iRKSzqisb/Bizpro---A-Business-Promotion-Solution-Landing-Page-(Community)(1)?type=design&node-id=0%3A1&mode=dev&t=rnhOQO3Cp7FrQR1x-1>)
