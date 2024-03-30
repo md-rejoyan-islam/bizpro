@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-color: #64d390 rgb(224, 249, 188);
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+  scroll-snap-align: start;
 }
 
 :root {
@@ -196,7 +200,7 @@ header nav ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
   }
 }
 
@@ -422,41 +426,26 @@ header .trial-btn {
 /* end work  section  */
 
 /* start about us  */
-
 #about {
-  padding: 60px 5px;
-  position: relative;
-  background-color: #f8f4f44b;
+  padding: 30px 10px 100px;
   position: relative;
 }
 
 #about .container {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  /* gap: 20px; */
+  display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
 }
 
-#about .first {
-  grid-column: span 3;
-}
-
 #about #man {
-  grid-column: span 4;
-  text-align: right;
-  position: relative;
+  margin: auto;
+}
+#about #photo {
+  width: 100%;
 }
 
 #man {
   position: relative;
-}
-#man #photo {
-  max-width: 475px;
-  transform: scale(1.2);
-  transform-origin: bottom;
-  position: absolute;
-  bottom: -80px;
-  right: 30px;
 }
 
 #medal {
@@ -465,33 +454,51 @@ header .trial-btn {
 
 #group {
   position: absolute;
-  top: 0;
+  top: -70px;
   right: 0;
   transform: scale(0.7);
 }
-#graph {
-  position: absolute;
-  bottom: -200px;
-  left: 50px;
-  transform: scale(0.8);
-  /* width: 233.333px; */
-  /* height: 217px; */
-}
 
 #about h2 {
-  color: var(--secondary-color);
-  font-size: 45px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 55px; /* 122.222% */
-  padding: 50px 0;
+  padding-bottom: 30px;
+  max-width: 450px;
+  margin: auto;
+  text-align: center;
+}
+
+#about p {
+  max-width: 550px;
+  margin: auto;
+  text-align: center;
+  line-height: 25px;
+  padding-bottom: 15px;
+}
+
+#about .about-cards {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 #about .card {
   display: flex;
   gap: 20px;
   align-items: start;
-  padding: 15px 0;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin: auto;
+}
+#about .card:hover {
+  border: 1px solid var(--primary-color);
+  background-color: #00e5ca07;
+}
+#about .card p {
+  padding-top: 8px;
+  text-align: left;
+  line-height: 22px;
 }
 #about .card img {
   border-radius: 12px;
@@ -501,6 +508,60 @@ header .trial-btn {
   height: 60px;
 }
 
+@media screen and (min-width: 810px) {
+  #about .about-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1100px) {
+  #about .container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: space-between;
+  }
+  #about h2 {
+    margin: 0;
+    text-align: left;
+  }
+  #about p {
+    margin: 0;
+    text-align: left;
+  }
+  #about .about-cards {
+    display: block;
+    padding: 0;
+  }
+  #about .card {
+    padding: 10px 0;
+    border: none;
+    margin: 0;
+  }
+  #about .card:hover {
+    border: none;
+    background-color: transparent;
+  }
+
+  #about .first {
+    grid-column: span 3;
+  }
+
+  #about #man {
+    grid-column: span 4;
+    text-align: right;
+    position: relative;
+    margin: 0;
+  }
+  #man #photo {
+    max-width: 475px;
+    transform: scale(1.2);
+    transform-origin: bottom;
+    position: absolute;
+    bottom: -70px;
+    right: 100px;
+  }
+}
+
 /* end about us */
 
 /* start global promotion  */
@@ -508,6 +569,7 @@ header .trial-btn {
 .global-promotion {
   margin: auto;
   text-align: center;
+  padding: 35px 10px;
 }
 
 .global-promotion h2 {
@@ -517,11 +579,12 @@ header .trial-btn {
   font-style: normal;
   font-weight: 700;
   line-height: 55px; /* 122.222% */
-  padding: 50px 0;
+  padding: 50px 10px 20px;
 }
 .global-promotion p {
   max-width: 700px;
   margin: 0 auto;
+  line-height: 26px;
 }
 
 #frame {
@@ -533,27 +596,31 @@ header .trial-btn {
 
 /* start newsletter  */
 
+#newsletter {
+  padding: 80px 20px;
+}
+
+#newsletter h2 {
+  text-align: center;
+}
 .newsletter {
   max-width: 1170px;
   background-color: #ecfdff;
   border-radius: 7px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 60px;
   box-sizing: border-box;
-  padding: 60px 60px 0px;
-  /* align-items: end; */
-  /* grid-template-columns: repeat(3, 1fr); */
-}
-.subscribe {
-  grid-column: span 2;
-  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 20px 20px 60px;
 }
 
 .subscribe p {
-  font-size: 16px;
   padding: 20px 0;
+  line-height: 24px;
+  max-width: 500px;
+  text-align: center;
 }
 
 .subscribe form {
@@ -563,6 +630,8 @@ header .trial-btn {
   border-radius: 5px;
   width: 80%;
   align-items: center;
+  border: 1px solid #f3f1f1;
+  margin: auto;
 }
 .subscribe form input {
   width: 100%;
@@ -570,13 +639,14 @@ header .trial-btn {
   border: none;
   border-radius: 5px;
   border: none;
+  font-size: 20px;
   margin: 10px;
 }
 .subscribe input:focus {
   outline: none;
 }
 .subscribe input::placeholder {
-  color: var(--para-color);
+  color: #352f2fb3;
   font-size: 20px;
 }
 .subscribe button {
@@ -598,12 +668,53 @@ header .trial-btn {
 }
 
 #promotion-man img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 270px;
-  scale: 1.1;
-  transform-origin: bottom;
+  width: 100%;
+  max-width: 300px;
+}
+
+@media screen and (min-width: 945px) {
+  #newsletter h2 {
+    text-align: left;
+  }
+  .newsletter p {
+    max-width: max-content;
+    text-align: left;
+  }
+  .newsletter form {
+    margin: 0;
+  }
+  .newsletter {
+    max-width: 1170px;
+    background-color: #ecfdff;
+    border-radius: 7px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    box-sizing: border-box;
+    padding: 60px 60px 0px;
+  }
+  .subscribe {
+    grid-column: span 2;
+    padding-bottom: 30px;
+  }
+  #promotion-man {
+    /* height: f; */
+    grid-column: span 1;
+    text-align: right;
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+  }
+
+  #promotion-man img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 270px;
+    scale: 1.15;
+    transform-origin: bottom;
+  }
 }
 
 /* end newsletter  */
@@ -612,7 +723,7 @@ header .trial-btn {
 
 #packages {
   background: #ecf9ff;
-  padding: 40px 5px;
+  padding: 90px 10px;
   position: relative;
 }
 
@@ -636,21 +747,24 @@ header .trial-btn {
   font-weight: 700;
   line-height: 55px;
   color: var(--secondary-color);
-  padding: 50px 0;
+  padding: 0 10px 50px;
+  text-align: center;
 }
 
 .packages {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
+  padding: 10px;
 }
 
 .packages .package {
   max-width: 370px;
   border-radius: 14px;
   border: 1px solid #fff;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.56);
   padding: 15px;
+  margin: auto;
 }
 
 .packages .package:hover {
@@ -680,6 +794,25 @@ header .trial-btn {
   display: flex;
   align-items: center;
 }
+.package .users p {
+  font-size: 13px;
+}
+.package .card-header {
+  position: relative;
+}
+
+.package .card-header .rating {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
 
 .package .package-content div {
   display: flex;
@@ -693,13 +826,30 @@ header .trial-btn {
   margin-right: -15px;
 }
 
+@media screen and (min-width: 720px) {
+  .packages .package {
+    margin: 0;
+  }
+  #packages h2 {
+    text-align: left;
+  }
+  .packages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .packages {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* end packages  */
 
 /* footer  */
 
 footer .footer-widget {
   background-color: var(--secondary-color);
-  padding: 50px 5px;
+  padding: 50px 10px;
 }
 
 footer .social-links {
