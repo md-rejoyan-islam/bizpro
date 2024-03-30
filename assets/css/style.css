@@ -8,6 +8,7 @@
   --primary-color: #00e5cc;
   --para-color: #9090a7;
   --secondary-color: #060640;
+  --bg-color: #ecf9ff;
   --max-container: 1340px;
   --size-small: 640px;
   --size-medium: 768px;
@@ -78,6 +79,73 @@ h2 {
   margin: 0 auto;
   box-sizing: border-box;
 }
+
+/* start header  */
+
+header {
+  background-color: var(--bg-color);
+  padding: 20px 0;
+}
+header nav {
+  max-width: 1170px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+header nav .logo {
+  color: var(--secondary-color);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px; /* 100% */
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+header nav .nav-links a:hover {
+  color: var(--primary-color);
+}
+
+header nav ul li a {
+  color: var(--para-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+}
+
+header nav .active {
+  color: var(--primary-color);
+}
+
+header .signin {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+header .trial-btn {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* end header  */
 
 /* start about us  */
 
