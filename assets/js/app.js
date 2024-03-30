@@ -14,13 +14,13 @@ bar.addEventListener("click", () => {
   nav_screen[0].style.boxShadow = "0px 30px 50px 0px #03032557";
   isBarOpen = true;
 });
+
 // small screen navbar close
 cross_btn.addEventListener("click", () => {
   isBarOpen = false;
   nav_screen[0].style.display = "none";
   header.style.position = "relative";
 });
-console.log(document.body.offsetWidth);
 
 // if screen size change
 document.body.onresize = () => {
