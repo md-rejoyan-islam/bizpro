@@ -67,10 +67,19 @@ h3 {
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: 55px; /* 122.222% */
+  line-height: 45px; /* 122.222% */
+}
+
+@media screen and (min-width: 640px) {
+  h2 {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 55px; /* 122.222% */
+  }
 }
 
 /* container  */
@@ -262,7 +271,7 @@ header .trial-btn {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 60px;
-    padding: 70px 10px;
+    padding: 70px 10px 30px;
   }
   #bussiness_btns {
     justify-content: start;
@@ -331,10 +340,10 @@ header .trial-btn {
 /* start work  section  */
 
 #work {
-  padding: 100px 5px;
+  padding: 60px 10px;
 }
 #work h2 {
-  padding: 50px 0;
+  padding: 20px 0;
   text-align: center;
   color: var(--secondary-color);
 }
@@ -350,20 +359,39 @@ header .trial-btn {
 
 .work-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
-  padding: 50px 0;
+  padding: 50px 10px;
+
+  margin: auto;
 }
 .work-cards .work-card {
   border-radius: 14px;
   background: #fff;
-  box-shadow: 0px 30px 50px 0px #0303250f;
+  box-shadow: 0px 20px 50px 0px #0303250f;
   padding: 20px;
   border: 1px solid #f6f1f1;
 }
 
+@media screen and (min-width: 640px) {
+  .work-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1038px) {
+  .work-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1296px) {
+  #work {
+    padding: 80px 10px;
+  }
+}
+
 .work-cards .work-card:hover {
-  box-shadow: 0px 30px 50px 0px #03032516;
+  box-shadow: 0px 20px 50px 0px #03032516;
   border: 1px solid #b5efcb;
 }
 
