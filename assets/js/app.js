@@ -3,10 +3,9 @@ const bar = document.getElementById("bar");
 const nav_screen = document.getElementsByClassName("nav-screen");
 const header = document.getElementsByTagName("header")[0];
 
-// toggle nav screen
-
 let isBarOpen = false;
-// toggle cross btn
+
+// small screen navbar open
 bar.addEventListener("click", () => {
   nav_screen[0].style.display = "block";
   header.style.position = "fixed";
@@ -15,7 +14,7 @@ bar.addEventListener("click", () => {
   nav_screen[0].style.boxShadow = "0px 30px 50px 0px #03032557";
   isBarOpen = true;
 });
-
+// small screen navbar close
 cross_btn.addEventListener("click", () => {
   isBarOpen = false;
   nav_screen[0].style.display = "none";
